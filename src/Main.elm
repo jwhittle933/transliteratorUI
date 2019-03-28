@@ -2,6 +2,9 @@ import Browser
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput)
+-- https://guide.elm-lang.org/architecture/forms.html
+
+-- Main
 
 main = 
   Browser.sandbox {init = init, update = update, view = view}
