@@ -12,12 +12,12 @@ main =
 -- Model
 
 type alias Model = 
-  { content : String
+  { text : String
   }
 
 init: Model
 init =
-  {content = ""}
+  {text = "Text to Transliterate"}
 
 -- Update
 
@@ -28,13 +28,17 @@ update: Msg -> Model -> Model
 update msg model =
   case msg of
     Change newContent ->
-      { model | content = newContent}
+      { model | text = newContent}
 
 -- View
 
 view: Model -> Html Msg
 view model =
   div []
-    [ input [ placeholder "Text to reverse", value model.content, onInput Change ] []
-    , div [] [ text (String.reverse model.content) ]
+    [ viewInput "text" "Place your text here." model.text Change
+
     ]
+
+viewInput : String -> String -> String -> (String -> msg) -> Html msg
+viewInput t p v toMsg =
+  input [type_ t, placeholder p, value v, onInput toMsg] []
