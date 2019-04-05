@@ -3,6 +3,9 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput)
 -- https://guide.elm-lang.org/architecture/forms.html
+-- https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
+-- https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer
+-- https://developer.mozilla.org/en-US/docs/Web/API/FileList
 
 -- Main
 
